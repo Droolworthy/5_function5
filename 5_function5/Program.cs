@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _5_function5
 {
@@ -8,27 +8,31 @@ namespace _5_function5
         {
             int[] array = { 1, 2, 3, 4, 5, 6 };
 
-            Shuffle(array);
+            MakeShuffle(array);
 
             for(int i = 0; i < array.Length; i++)
             {     
                 Console.Write(array[i] + " ");
             }
-            
+
             Console.ReadKey();
         }
 
-        static void Shuffle(int[] array)
+        static void MakeShuffle(int[] array)
         {
-            Random random = new Random();
-
             for (int i = 0; i < array.Length; i++)
             {
-                int j = random.Next(i + 1);
-                int value = array[i];
-                array[i] = array[j];
-                array[j] = value;               
+                SwapShuffle(i, array);
             }
-        }                
+        }
+        
+        static void SwapShuffle(int i, int[] array)
+        {
+            Random random = new Random();
+            int j = random.Next(i + 1);
+            int value = array[i];
+            array[i] = array[j];
+            array[j] = value;
+        }
     }
 }
