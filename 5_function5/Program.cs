@@ -14,6 +14,7 @@ namespace _5_function5
             {     
                 Console.Write(array[i] + " ");
             }
+            
             Console.ReadKey();
         }
 
