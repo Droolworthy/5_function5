@@ -13,9 +13,7 @@ namespace _5_function5
             for(int i = 0; i < array.Length; i++)
             {     
                 Console.Write(array[i] + " ");
-            }
-
-            Console.ReadKey();
+            }           
         }
 
         static void MakeShuffle(int[] array)
