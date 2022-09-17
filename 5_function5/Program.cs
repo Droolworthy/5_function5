@@ -18,19 +18,14 @@ namespace _5_function5
 
         static void MakeShuffle(int[] array)
         {
-            for (int i = 0; i < array.Length; i++)
+            for (int numbers = 0; numbers < array.Length; numbers++)
             {
-                SwapShuffle(i, array);
+                Random random = new Random();
+                int tempArray = random.Next(numbers + 1);
+                int value = array[numbers];
+                array[numbers] = array[tempArray];
+                array[tempArray] = value;
             }
-        }
-        
-        static void SwapShuffle(int i, int[] array)
-        {
-            Random random = new Random();
-            int j = random.Next(i + 1);
-            int value = array[i];
-            array[i] = array[j];
-            array[j] = value;
         }
     }
 }
